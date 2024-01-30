@@ -32,15 +32,17 @@ function encontrarMayor(arr) {
 
   return indiceMayor;
 }
-
+//encuentra el número más grande en el array inicio en cada iteración, lo agrega al array numerosOrdenados 
+//y lo elimina del array inicio
 while (true) {
   const indiceMayor = encontrarMayor(inicio);
 
   if (indiceMayor === -1) {
     break;
   }
-
+//el número se agrega al array numerosOrdenados
   numerosOrdenados.push(inicio[indiceMayor]);
+  //splice para eliminar el número encontrado del array inicio
   inicio.splice(indiceMayor, 1);
 }
 
